@@ -3,6 +3,5 @@
     <string-array name="searchoptions">
         <item>Title</item>
         <item>Magnitude</item>
-        <item>Blank</item>
     </string-array>
 </resources>

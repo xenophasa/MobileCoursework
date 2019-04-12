@@ -1,4 +1,4 @@
-package gcu.mpd.bgsdatastarter;
+package gcu.mpd.S1430395;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

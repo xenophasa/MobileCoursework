@@ -1,43 +1,69 @@
-<!--  MPD XML Starter code Semester B Session 2018 2019  -->
+<!--  MPD XML Starter code Semester B Session 2018 2019
+//
+//Name  John Fletcher
+//Student Id    S1430395
+//Programme of Study    Computing
+//-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
-        <TextView android:id="@+id/acknowledgement"
+        <TextView
+            android:id="@+id/salutation"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Contains British Geological Survey materials ©NERC 2019"/>
+            android:text="Welcome to Mobile Platform Development"
+            android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Press to get data" />
 
-        <TextView android:id="@+id/salutation"
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Welcome to Mobile Platform Development"/>
+            android:weightSum="2"
+            android:orientation="horizontal">
 
-        <Button android:id="@+id/startButton"
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Search Form"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/mapButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Open Maps"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/acknowledgement"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Press to get data"/>
+            android:text="Contains British Geological Survey materials ©NERC 2019"
+            android:textSize="20sp" />
 
-        <Button android:id="@+id/searchButton"
+        <TextView
+            android:id="@+id/listTextView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:text="Search Form"/>
-
-
-        <TextView android:id="@+id/listTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <!--<ListView android:id="@+id/rawDataDisplay"
             android:layout_width="fill_parent"
@@ -45,13 +71,10 @@
             android:textSize="20sp"
             android:text="Raw Data is Displayed here"/>-->
 
-        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <ListView
             android:id="@+id/rawDataDisplay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:context="abhiandroid.com.listexample.MainActivity">
-        </ListView>
+            android:layout_height="wrap_content"></ListView>
     </LinearLayout>
 </ScrollView>
 

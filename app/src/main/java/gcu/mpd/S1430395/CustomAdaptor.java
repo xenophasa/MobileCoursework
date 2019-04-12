@@ -3,25 +3,17 @@
 //Student Id    S1430395
 //Programme of Study    Computing
 //
-package gcu.mpd.bgsdatastarter;
+package gcu.mpd.S1430395;
 
 import android.content.Context;
-import android.database.DataSetObserver;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedList;
-
-import javax.security.auth.Subject;
-
-import static android.util.Half.EPSILON;
 
 public class CustomAdaptor extends ArrayAdapter<Earthquake> {
 

@@ -1,10 +1,15 @@
-<!--  MPD XML Starter code Semester B Session 2018 2019  -->
+<!--  MPD XML Starter code Semester B Session 2018 2019
+//
+//Name  John Fletcher
+//Student Id    S1430395
+//Programme of Study    Computing
+//-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -26,6 +31,12 @@
             android:visibility="gone"
             android:text="Search Form"/>
 
+        <Button android:id="@+id/mapButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Open Maps"/>
+
         <TextView android:id="@+id/acknowledgement"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -43,12 +54,11 @@
             android:textSize="20sp"
             android:text="Raw Data is Displayed here"/>-->
 
-        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <ListView
             android:id="@+id/rawDataDisplay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context="abhiandroid.com.listexample.MainActivity">
+            >
         </ListView>
     </LinearLayout>
 </ScrollView>

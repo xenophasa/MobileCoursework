@@ -3,7 +3,7 @@
 //Student Id    S1430395
 //Programme of Study    Computing
 //
-package gcu.mpd.bgsdatastarter;
+package gcu.mpd.S1430395;
 
 import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
@@ -11,20 +11,15 @@ import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import java.io.Serializable;
-import java.util.ArrayList;
 
 public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
 
@@ -36,7 +31,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps2);
         text = (TextView) findViewById(R.id.keyText);
-        Spannable span = new SpannableString("Magnitude key:\nRed = above 2 Yellow = between 1 and 2 and Green = below 1" );
+        Spannable span = new SpannableString("Magnitude key:\nRed = above 2 Yellow = between 1 and 2 and Green = below 1 \n S1430395" );
         span.setSpan(new ForegroundColorSpan(Color.RED),15,28,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         span.setSpan(new ForegroundColorSpan(Color.YELLOW),29,53,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         span.setSpan(new ForegroundColorSpan(Color.GREEN),58,73,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -70,18 +65,19 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
         for(int i =0;i<extras.size()/3;i++) {
             String title = extras.getString(i + "Title");
             LatLng marker = extras.getParcelable(i + "Value");
-            double temp = extras.getDouble(i+"Magnitude");
+            double temp = extras.getDouble(i + "Magnitude");
             String[] seperated = title.split("\n");
 
-            if(temp>2.0) {
+            if (temp > 2.0) {
                 mMap.addMarker(new MarkerOptions().position(marker).title(seperated[0]).snippet(seperated[1] + seperated[2]).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-            }else if(temp>1.0){
+            } else if (temp > 1.0) {
                 mMap.addMarker(new MarkerOptions().position(marker).title(seperated[0]).snippet(seperated[1] + seperated[2]).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
-            }else{
+            } else {
                 mMap.addMarker(new MarkerOptions().position(marker).title(seperated[0]).snippet(seperated[1] + seperated[2]).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
             }
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker,zoom));
-        }
 
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, zoom));
+        }
+        System.out.println("This is the extra count: " + extras.size()/3);
     }
 }

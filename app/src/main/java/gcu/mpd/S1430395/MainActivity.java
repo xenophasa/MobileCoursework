@@ -5,28 +5,21 @@
 //
 
 // Update the package name to include your Student Identifier
-package gcu.mpd.bgsdatastarter;
+package gcu.mpd.S1430395;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.Xml;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -44,12 +37,9 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.ListResourceBundle;
 
-import gcu.mpd.bgsdatastarter.R;
+import gcu.mpd.S1430395.R;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
     private Handler mHandler = new Handler();
@@ -85,9 +75,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         // More Code goes here
     }
 
-    public void startRepeating(View v){
-
-    }
 
     public void onClick(View aview) {
         switch (aview.getId())
